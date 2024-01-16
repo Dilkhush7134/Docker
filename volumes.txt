@@ -1,0 +1,26 @@
+[root@k8worker-1 volume]#
+[root@k8worker-1 volume]# pwd
+/root/volume
+[root@k8worker-1 volume]#
+[root@k8worker-1 volume]#
+[root@k8worker-1 volume]#
+[root@k8worker-1 volume]# pwd
+/root/volume
+[root@k8worker-1 volume]# ls
+myvol
+[root@k8worker-1 volume]#
+[root@k8worker-1 volume]# cd myvol/
+[root@k8worker-1 myvol]# ls
+0  1  2  3  4  5  6  7  8  9
+[root@k8worker-1 myvol]#
+[root@k8worker-1 myvol]# docker run -it --name mycontainer -v /root/volume/myvol:/tmp/vivekanand ubuntu
+root@32e42eb18f62:/#
+root@32e42eb18f62:/# cd /tmp/
+root@32e42eb18f62:/tmp# ls
+vivekanand
+root@32e42eb18f62:/tmp#
+root@32e42eb18f62:/tmp# cd vivekanand/
+root@32e42eb18f62:/tmp/vivekanand# ls
+0  1  2  3  4  5  6  7  8  9
+root@32e42eb18f62:/tmp/vivekanand#
+root@32e42eb18f62:/tmp/vivekanand#

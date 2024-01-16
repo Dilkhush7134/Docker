@@ -24,7 +24,17 @@ root@32e42eb18f62:/tmp/vivekanand# ls
 0  1  2  3  4  5  6  7  8  9
 root@32e42eb18f62:/tmp/vivekanand#
 root@32e42eb18f62:/tmp/vivekanand#
----------------------------------------------In Details--------------------------------------------------------
+---------------------------------------------Docker Storage-------------------------
+										
+Docker volumes drivers allow you to perform unique abilities such as creating persistent storage on other hosts, cloud, encrypt volumes.
+They basically enhance the abilities of a volumes.
+
+
+Types of Storage
+------------------
+1. volume
+2. bind mount
+3. tmpfs mount
 <<<<<<<<<<***********Volume*********>>>>>>>>>>>>>
 
 it is a type of persistent data which is totally managed by docker only.

@@ -24,3 +24,50 @@ root@32e42eb18f62:/tmp/vivekanand# ls
 0  1  2  3  4  5  6  7  8  9
 root@32e42eb18f62:/tmp/vivekanand#
 root@32e42eb18f62:/tmp/vivekanand#
+---------------------------------------------In Details--------------------------------------------------------
+<<<<<<<<<<***********Volume*********>>>>>>>>>>>>>
+
+it is a type of persistent data which is totally managed by docker only.
+
+1. docker volume create volume_name
+2. docker volume ls
+3. docker volume rm volume_name
+4. docker volume prune
+5. docker volume inspect volume_name
+6. docker run -it -id --name container-name --volume volume_name'/target ubuntu
+7. docker run -it -id --name container-name --mount source=volume_name,target=destination_location ubuntu
+8. docker run -it -id --name container-name --mount source=volume_name,target=destination_location,readonly ubuntu
+9. docker container inspect container-name
+10. docker container update --mount source=my_volume,target=/container/path CONTAINER_ID
+
+<<<<<<<<<<**********bind mount******>>>>>>>>>>>>>
+
+bind mount aren't managed by docker and are mapped to a host system directory.
+
+10. docker run -it -d --name cont_name --mount type=bind,source=$(pwd),target=/apps ubuntu
+
+after that if you create any file in pwd, that file will be seen in container under mentioned target location and vice-versa. 
+
+<<<<<<<<<<<<<<***********Tmpfs mount******>>>>>>>>>>>>>>>>>>>
+This type of storage maps to the Host systems memory. Tmpfs is not persistent like volume and tmpfs and get removed when the container
+they are attached to  stopped. They only ever get mapped to a single container in their lifetime. Allows you to store more temporary data without affecting
+a containers efficiency.
+
+11. docker run -it -d --name cont-name --tmpfs /appss ubuntu 
+___________________________
+FROM ubuntu
+VOLUME ["/myvolume1"]
+
+docker run -it --name container1 dockerfile /bin/bash
+docker run -it --name container2 --privileged=true --volumes-from container1 imagename /bin/bash
+
+CONTAINER-TO-CONTAINER:
+docker volume create myv
+docker run -it -d --name cont5 -v myv:/tmp mynewc /bin/bash
+docker run -it --name cont6 -v myv:/tmp mynewc /bin/bash
+
+HOST-TO-CONTAINER:
+docker run -it -d --name cont1 -v /myvol:/myv mynewc /bin/bash
+docker run -it -d --name cont2 -v /myvol:/myv1 mynewc /bin/bash
+___________________________
+

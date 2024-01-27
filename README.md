@@ -1,23 +1,23 @@
 DOCKER
 
-Q) What is DOCKER
+What is DOCKER
 
-		A docker is a tool that helps in developing, building, deploying and executing software in isolation. it does so by creating containers that completely wrap a software.
+	A docker is a tool that helps in developing, building, deploying and executing software in isolation. it does so by creating containers that completely wrap a software.
 
-Q)  CONTAINER
+CONTAINER
 
-		A container is a software that wrap up all the parts of a code and its dependencies in a sigle deployment unit that can be run on different systems or servers.
-		for ex- code + libraries + e.t.c = Conatainers --> OS
+	A container is a software that wrap up all the parts of a code and its dependencies in a sigle deployment unit that can be run on different systems or servers.
+	for ex- code + libraries + e.t.c = Conatainers --> OS
 			
-Q)  WHy we use containers
+WHy we use containers
 
-		Containers require less system resources than traditional or hardware virtual machine environments because they don't include operating system images. 
-		Applications running in containers can be deployed easily to multiple different operating systems and hardware platforms.
+	Containers require less system resources than traditional or hardware virtual machine environments because they don't include operating system images. 
+	Applications running in containers can be deployed easily to multiple different operating systems and hardware platforms.
 
-Q) What is repository
+What is repository
 
-		Docker Hub repositories allow you share container images with your team, customers, or the Docker community at large.
-		Docker images are pushed to Docker Hub through the docker push command. A single Docker Hub repository can hold many Docker images (stored as tags).
+	Docker Hub repositories allow you share container images with your team, customers, or the Docker community at large.
+	Docker images are pushed to Docker Hub through the docker push command. A single Docker Hub repository can hold many Docker images (stored as tags).
 
 
 DOCKER ENVIRONMENT  
@@ -41,6 +41,7 @@ DOCKER REGISTRY
 	made to store container images.
 
 DOCKER OBJECTS
+
 	- Docker Images
 	- Docker Containers
  	- Docker Volumes

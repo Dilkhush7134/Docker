@@ -1,0 +1,15 @@
+DOCKER COMPOSE:
+Docker compose is just a services within docker that let us launch multiple containers at the same time.
+
+curl -L "https://github.com/docker/compose/releases/download/1.10.0-rc2/dockercompose
+   -$(uname -s) -$(uname -m)" -o /home/demo/docker-compose
+chmod +x /home/demo/docker-compose
+   
+
+
+1. Create an yml file
+    # docker-compose up
+    # docker-compose down
+    # docker-compose ps
+    # docker-compose run project-name env
+    # docker-compose stop

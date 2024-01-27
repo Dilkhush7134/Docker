@@ -12,3 +12,7 @@ chmod 0600 ~/.docker/config.json
         }
     }
 }
+
+
+
+#echo -n 'dilkhush7134:DockeR!nd1@' | base64    - It basically encode the value in base64 format.

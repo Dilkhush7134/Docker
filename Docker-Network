@@ -1,0 +1,53 @@
+Docker Network:
+										
+Docker network is basicaly a connection between one or more containers. one or more powerful thing about the docker container is, 
+that they can be easily connected to one other or even other software. this makes it very easy to isolate and manage the containers.
+
+
+
+Type of network:
+
+  1. Bridge
+  2. Host	 
+  3. Overlay
+  4. Macvlan
+  5. None
+
+
+1. Bridge:
+      The containers can communicate with each other using Bridge network, it crates a isolation layer between the docker container.
+
+    # docker network create --driver Bridge mynet     --> Bridge is a network type & mynet is the name of network.
+    # docker network ls
+    # docker network inspect network_ID
+    # docker run -it -d --network bridge --name mycontainer ubuntu
+
+
+2. Host:
+    Docker containers that are connected directly to the Host network basically share the namespace with their host. I.e Containers share the IP address of Host. 
+    don't have one of their own.
+
+    # docker run -it -d --network host --name mycontainer nginx:latest
+
+
+3. Overlay:
+      if the containers present in different Docker host can communicate with each other using overlay network. using a docker swarm.
+
+    To become a manager node.
+      # sudo docker swarm init
+      # sudo docker swarm init --advertisement-network 192.168.0.1 
+      # docker swarm init --advertise-addr 172.25.0.44
+      # docker swarm join-token manager
+    After running this command you will have an url, basically this url is used to join the running swarm as a worker node.
+
+        # docker network create --driver overlay mynet
+        # docker network ls
+        # docker service create --name my-service --network mynet --replicas 3 nginx:latest
+        # docker service rm my-service
+        # docker service ps my-service
+
+4. None:
+        A docker which has none network configured for itself cannot communicate with any service or system as networking for the containers is virtually disabled.
+        It's usually used to isolate certain containers.
+
+        # docker run -it -d --network none --name mycontainer ubuntu

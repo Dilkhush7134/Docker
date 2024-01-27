@@ -1,0 +1,65 @@
+DOCKER SWARM:
+  Docker swarm is a services within docker that allow us to manage multiple containers at the same time. it is also a cluster of multiple containers.
+ 
+Why ORCHESTRATION: 
+  it allows us to manage and maintain multiple containers . Making use of micro-services arcitecture as it breaks down the software into small manageable chunks.
+  having different configurations and environments becomes easier with orchestration.
+
+BENEFIT OF ORCHESTRATION:
+  1. Easy Deployment
+  2. Easy Management
+  3. Easy Resource Management
+  4. Allows for health monitoring of the containers
+  5. Load balancing among different containers
+  6. Easy updating
+  7. Easy sacling Up and rolling back
+  8. Layer of securities 
+
+SWARM ARCHITECTURE:
+									  Worker Node
+    DOCKER ENGINE   MANAGER NODE   Worker node
+									  Worker Node
+
+
+DOCKER SWARM COMPONENTS:
+  1. Service
+  2. Task
+  3. Manager Nodes
+  4. Worker Nodes
+  5. Load balancing
+
+
+# sudo docker swarm init
+# sudo docker swarm init --advertisement-network 192.168.0.1 
+# docker swarm join-token manager
+# docker network ls
+# docker info
+# docker swarm leave
+# docker swarm join-token worker
+# docker node rm node-ID
+# docker swarm leave --force
+# docker service create --name myservice --replicas 3 -p 80:80 httpd
+docker service create --mode=global nginx 
+# docker service ls
+# docker service ps myservice
+# docker node ls
+# docker ps
+# docker rm -f service-name 
+# docker node promote worker01 worker02
+# docker node demote worker01 worker02
+    After deleting the services it automatically creates that services instantly.
+
+# docker service inspect my-service
+# docker service rm my-service
+
+
+
+Create a docker-compose.yml file.
+
+  # docker stack deploy -c docker-compose.yml file_name 
+  # docker stack rm file_name
+  # docker service scale service-name=4
+  # docker node ls
+  # docker node update  --avaiability drain node-ID 
+  # docker node ls
+  # docker service update --image mysql:latest service-ID

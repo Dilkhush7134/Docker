@@ -1,0 +1,25 @@
+Related to Images & Conatiner:
+
+sudo apt-get install docker.io								( to install docker )
+# docker version												( to check the version of docker)
+# docker --version												( to check the current version of docker)
+# docker pull ubuntu   											( it pulls the image of ubuntu OS from docker hub)
+# docker images 												( to see pulled image and its charactericts)
+# docker run -it -d ubuntu 										( to run the image in a container)
+# docker run -it -d --name newname ubuntu 						( to change te name of image)
+# docker run -it -d --name newname -p 80:80 ubuntu				( port configuration)
+# docker port container-ID
+# docker ps														( list of container )
+# docker ps -a 													( to check all containers "running and not running all)
+# docker exec -ti imagename bash								( go into the container)
+# docker stop container-id 										( to stop container)
+# docker kill container-id										( to kill the running container)
+# docker rm container-id 										( to remove container )
+# docker rm -f container-id 									( to remove container forcefully)
+# docker commit container-id newname							( to create a replica of running image)
+# docker tag running_image_name  docker_username/new-image-name:v1	( to tag the new name to running image)
+# docker login
+# docker push docker_username/new-image-name
+# docker rmi  dilkhush7134/new-image-name
+
+==================================================================================================================

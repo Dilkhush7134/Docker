@@ -20,7 +20,7 @@ Q) What is repository
 		Docker images are pushed to Docker Hub through the docker push command. A single Docker Hub repository can hold many Docker images (stored as tags).
 
 
- DOCKER ENVIRONMENT  
+ #DOCKER ENVIRONMENT  
 
 1.) Docker Engine
 2.) Docker Registry
@@ -28,16 +28,12 @@ Q) What is repository
 4.) Docker Compose
 5.) Docker Swarm
 
-%%%%%%%%%%%%%%%%%%%%%%   DOCKER ENGINE   %%%%%%%%%%%%%%%%%%%%%%%%%%
+#DOCKER ENGINE
 								
 It consists of
-Docker CLI
-+ 
-Docker API
-+ 
-Docker Daemon
+Docker CLI + Docker API + Docker Daemon
 
-%%%%%%%%%%%%%%%%%%%%%%%%    DOCKER REGISTRY     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+#DOCKER REGISTRY 
 
 Docker registry is as storage location of Docker images. These images can be versioned in the registry as well.
 It is also called DOCKER-HUB
@@ -45,7 +41,7 @@ It is also called DOCKER-HUB
 While a container repository is a collection of related container images used to manage, pull and push images, a container registry is a collection of repositories
 made to store container images.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%   DOCKER OBJECTS   %%%%%%%%%%%%%%%%%%%%%%%%
+#DOCKER OBJECTS
 Docker Images
 Docker Containers
 Docker Volumes
